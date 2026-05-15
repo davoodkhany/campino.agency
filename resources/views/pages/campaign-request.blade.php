@@ -3,29 +3,34 @@
 @section('title', 'درخواست کمپین')
 
 @section('content')
-    <section class="mx-auto mt-12 grid w-[min(95%,72rem)] gap-8 lg:grid-cols-[.9fr_1.1fr]">
-        <div>
-            <x-section-title
-                kicker="Campaign Request"
-                title="شروع همکاری با کمپینو"
-                description="این فرم برای بررسی اولیه نیاز شماست. بعد از ثبت، تیم فروش برای جلسه شناخت تماس می گیره."
-            />
+    <section class="container-shell mt-12 grid gap-7 lg:grid-cols-[.9fr_1.1fr]">
+        <aside class="space-y-6">
+            <div class="dark-surface rounded-[2rem] p-7">
+                <x-section-title
+                    kicker="Campaign Request"
+                    title="شروع همکاری با Campino"
+                    description="این فرم فقط برای شناخت اولیه است. بعد از ثبت، تیم ما با یک پیشنهاد اجرایی تماس می گیرد."
+                />
+            </div>
 
-            <div class="mt-6 rounded-2xl border border-white/10 bg-slate-900/70 p-5">
-                <h3 class="text-base font-bold text-white">چه اطلاعاتی بهتره آماده باشه؟</h3>
-                <ul class="mt-4 space-y-2 text-sm text-slate-300">
-                    <li>• هدف اصلی از کمپین: لید، فروش یا آگاهی برند</li>
-                    <li>• بودجه تقریبی ماهانه</li>
-                    <li>• کانال های فعلی تبلیغات</li>
-                    <li>• چالش اصلی تیم مارکتینگ یا فروش</li>
+            <div class="premium-card rounded-[2rem] p-6">
+                <h3 class="text-lg font-black text-[color:var(--ink)]">بعد از ثبت فرم چه اتفاقی می افته؟</h3>
+                <ul class="mt-4 space-y-3 text-sm leading-7 text-[color:var(--ink)]/82">
+                    <li>• طی ۲۴ ساعت کاری با شما تماس می گیریم.</li>
+                    <li>• جلسه کشف نیاز برند برگزار می شه.</li>
+                    <li>• پلن اولیه کمپین + بازه بودجه ارائه می دیم.</li>
+                    <li>• در صورت تایید، فاز اجرا شروع می شه.</li>
                 </ul>
             </div>
-        </div>
+        </aside>
 
-        <form action="{{ route('campaign-request.submit') }}" method="POST" class="rounded-3xl border border-white/10 bg-slate-900/70 p-6 md:p-8">
+        <form action="{{ route('campaign-request.submit') }}" method="POST" class="dark-surface rounded-[2rem] p-6 md:p-8">
             @csrf
 
-            <div class="grid gap-4 md:grid-cols-2">
+            <h3 class="text-2xl font-black text-white">فرم درخواست طراحی کمپین</h3>
+            <p class="mt-3 text-sm text-[color:var(--gold-light)]/88">برای دریافت پیشنهاد دقیق، اطلاعات زیر را کامل کنید.</p>
+
+            <div class="mt-7 grid gap-4 md:grid-cols-2">
                 <x-forms.input name="brand_name" label="نام برند" placeholder="مثال: کمپینو" :required="true" />
                 <x-forms.input name="full_name" label="نام و نام خانوادگی" placeholder="مثال: علی محمدی" :required="true" />
                 <x-forms.input name="phone" label="شماره تماس" placeholder="مثال: 09121234567" :required="true" />
@@ -60,14 +65,14 @@
                 <x-forms.textarea
                     name="description"
                     label="توضیحات تکمیلی"
-                    placeholder="کمی درباره وضعیت فعلی تبلیغات و هدف کمپین بنویسید..."
+                    placeholder="وضعیت فعلی تبلیغات، چالش اصلی و هدف فروش را توضیح دهید..."
                     :required="true"
                 />
             </div>
 
-            <div class="mt-6 flex items-center justify-between gap-3">
-                <p class="text-xs text-slate-400">با ثبت فرم، تیم کمپینو برای هماهنگی جلسه با شما تماس می گیرد.</p>
-                <x-forms.submit text="ارسال درخواست" />
+            <div class="mt-7 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-xs text-[color:var(--gold-light)]/75">اطلاعات شما محرمانه می مونه و فقط برای هماهنگی همکاری استفاده می شه.</p>
+                <x-forms.submit text="ارسال درخواست کمپین" />
             </div>
         </form>
     </section>

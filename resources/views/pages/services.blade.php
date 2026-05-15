@@ -3,50 +3,60 @@
 @section('title', 'خدمات')
 
 @section('content')
-    <section class="mx-auto mt-12 w-[min(95%,72rem)]">
-        <x-section-title
-            kicker="خدمات کمپینو"
-            title="خدماتی که مستقیم به رشد لید و فروش وصل می شن"
-            description="هر خدمت با KPI مشخص، برنامه اجرا و گزارش قابل استفاده برای تیم شما ارائه می شه."
-        />
-
-        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <x-card title="طراحی استراتژی کمپین" icon="S1" description="هدف گذاری، انتخاب بازار هدف و تدوین مسیر اجرای 3 ماهه." />
-            <x-card title="تحقیق بازار و رقبا" icon="S2" description="تحلیل پیام، پیشنهاد ارزش و نقاط ضعف کمپین های رقیب." />
-            <x-card title="تولید پیام و کانسپت" icon="S3" description="طراحی پیام های تبلیغاتی برای هر مرحله از قیف بازاریابی." />
-            <x-card title="مدیریت تبلیغات عملکردی" icon="S4" description="بهینه سازی روزانه کمپین های کلیکی برای کاهش CAC و افزایش ROI." />
-            <x-card title="تحلیل داده و داشبورد" icon="S5" description="گزارش های ساده و دقیق برای تصمیم گیری سریع تیم مارکتینگ." />
-            <x-card title="مشاوره تیم داخلی" icon="S6" description="جلسات هفتگی برای هم راستا کردن تیم فروش، محتوا و تبلیغات." />
+    <section class="container-shell mt-12">
+        <div class="dark-surface rounded-[2.2rem] px-6 py-10 md:px-10 md:py-12">
+            <x-section-title
+                kicker="Campino Services"
+                title="خدمات ۳۶۰ درجه برای ساخت مسیر فروش، نه فقط اجرای تبلیغ"
+                description="خدمات ما به صورت یکپارچه طراحی شده تا از اولین تماس مخاطب تا فروش نهایی، یک سیستم رشد قابل تکرار داشته باشید."
+            />
         </div>
     </section>
 
-    <section class="mx-auto mt-14 w-[min(95%,72rem)] rounded-3xl border border-white/10 bg-slate-900/70 p-6 md:p-8">
-        <x-section-title
-            title="فرآیند همکاری"
-            description="همکاری با کمپینو مرحله به مرحله و شفاف پیش می ره."
-        />
-
-        <div class="mt-8 grid gap-4 md:grid-cols-4">
-            @foreach ([
-                ['n' => '1', 't' => 'شناخت کسب و کار'],
-                ['n' => '2', 't' => 'طراحی پلن اجرایی'],
-                ['n' => '3', 't' => 'اجرا و بهینه سازی'],
-                ['n' => '4', 't' => 'گزارش و توسعه'],
-            ] as $step)
-                <div class="rounded-2xl border border-white/10 bg-slate-950/60 p-4">
-                    <p class="text-xl font-extrabold text-orange-300">{{ $step['n'] }}</p>
-                    <p class="mt-2 text-sm text-slate-300">{{ $step['t'] }}</p>
-                </div>
-            @endforeach
+    <section class="container-shell mt-14">
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <x-card title="استراتژی کمپین و جایگاه سازی" icon="S1" description="تحلیل وضعیت فعلی برند، طراحی پیام اصلی، تعریف KPI و نقشه کمپین ۹۰ روزه." />
+            <x-card title="طراحی خلاقه و پیام تبلیغ" icon="S2" description="ساخت زاویه های پیام رسانی، سناریوی تبلیغاتی و یکپارچه سازی ارتباط برند در همه کانال ها." />
+            <x-card title="طراحی لندینگ و Conversion UX" icon="S3" description="پیاده سازی لندینگ با ساختار فروش محور، فرم های هوشمند و مسیر ساده تصمیم گیری کاربر." />
+            <x-card title="مدیریت رسانه و Media Buying" icon="S4" description="انتخاب پلتفرم، اجرای کمپین، بودجه بندی پویا و بهینه سازی روزانه بر اساس داده واقعی." />
+            <x-card title="CRM و پرورش لید" icon="S5" description="طبقه بندی لیدها، سناریوی Follow-up و اتصال کامل مارکتینگ به تیم فروش." />
+            <x-card title="گزارش مدیریتی و تحلیل درآمد" icon="S6" description="داشبورد شفاف، تحلیل قیف فروش و تصمیم سازی سریع برای توسعه کمپین." />
         </div>
     </section>
 
-    <section class="mx-auto mt-14 w-[min(95%,72rem)]">
+    <section class="container-shell mt-16">
+        <div class="premium-card rounded-[2rem] p-7 md:p-10">
+            <x-section-title
+                kicker="Workflow"
+                title="فرآیند همکاری شفاف و اجرایی"
+                description="در هر مرحله خروجی دقیق و زمان بندی مشخص دریافت می کنید."
+            />
+
+            <div class="mt-8 grid gap-4 md:grid-cols-4">
+                @foreach ([
+                    ['step' => '01', 'title' => 'جلسه کشف و تحلیل', 'desc' => 'شناخت بازار، محصول و اهداف فروش'],
+                    ['step' => '02', 'title' => 'طراحی پلن کمپین', 'desc' => 'استراتژی، رسانه، لندینگ و KPI'],
+                    ['step' => '03', 'title' => 'اجرا و بهینه سازی', 'desc' => 'مدیریت روزانه عملکرد کمپین'],
+                    ['step' => '04', 'title' => 'مقیاس و توسعه', 'desc' => 'افزایش بودجه روی کانال های سودده'],
+                ] as $item)
+                    <div class="rounded-2xl border border-[color:var(--purple-light)]/20 bg-[color:var(--purple-light)]/10 p-5">
+                        <p class="text-sm font-black text-[color:var(--purple)]">{{ $item['step'] }}</p>
+                        <h3 class="mt-2 text-base font-black text-[color:var(--ink)]">{{ $item['title'] }}</h3>
+                        <p class="mt-3 text-sm leading-7 text-[color:var(--ink)]/80">{{ $item['desc'] }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="container-shell mt-16">
         <x-cta
-            title="مناسب برند شما کدوم سرویسه؟"
-            description="یک تماس کوتاه بگیریم تا بر اساس وضعیت فعلی تون، ترکیب خدمات مناسب رو پیشنهاد بدیم."
-            primary-text="درخواست مشاوره"
+            title="برای برند شما کدوم ترکیب خدمات بهتر جواب می ده؟"
+            description="یک جلسه کوتاه بگذاریم تا بر اساس بودجه، تیم و هدف فروش، نسخه مناسب خدمات را پیشنهاد بدیم."
+            primary-text="درخواست مشاوره تخصصی"
             :primary-href="route('contact')"
+            secondary-text="شروع درخواست کمپین"
+            :secondary-href="route('campaign-request')"
         />
     </section>
 @endsection

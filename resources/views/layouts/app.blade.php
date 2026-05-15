@@ -3,30 +3,31 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'کمپینو') | کمپینو ایجنسی</title>
+    <title>@yield('title', 'کمپینو') | Campino Agency</title>
     <meta name="description" content="کمپینو ایجنسی طراحی و اجرای کمپین های تبلیغاتی 360 درجه">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans bg-slate-950 text-slate-100 antialiased">
-    <div class="relative min-h-screen overflow-hidden">
+<body class="font-sans antialiased">
+    <div class="relative overflow-clip">
         <div class="pointer-events-none absolute inset-0 -z-10">
-            <div class="absolute -top-32 right-0 h-80 w-80 rounded-full bg-orange-400/20 blur-3xl"></div>
-            <div class="absolute top-72 -left-16 h-72 w-72 rounded-full bg-emerald-400/15 blur-3xl"></div>
-            <div class="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl"></div>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_50%)]"></div>
+            <div class="absolute -right-24 top-24 h-[26rem] w-[26rem] rounded-full bg-[color:var(--gold)]/20 blur-[130px]"></div>
+            <div class="absolute left-[-7rem] top-[30rem] h-[28rem] w-[28rem] rounded-full bg-[color:var(--purple-light)]/24 blur-[120px]"></div>
+            <div class="absolute right-1/3 top-[60rem] h-[26rem] w-[26rem] rounded-full bg-[color:var(--purple)]/24 blur-[120px]"></div>
         </div>
 
         <x-header />
 
-        <main class="relative z-10 pb-20">
+        <main class="relative z-10 pb-24">
             @if (session('success'))
-                <div class="mx-auto mt-6 w-[min(95%,72rem)] rounded-2xl border border-emerald-300/40 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100">
-                    {{ session('success') }}
+                <div class="container-shell mt-7">
+                    <div class="premium-glass rounded-2xl px-5 py-4 text-sm font-semibold text-[color:var(--gold-light)]">
+                        {{ session('success') }}
+                    </div>
                 </div>
             @endif
 

@@ -7,14 +7,21 @@
 
 <div {{ $attributes->class([$center ? 'text-center' : 'text-right']) }}>
     @if ($kicker)
-        <p class="mb-3 inline-flex rounded-full border border-orange-300/30 bg-orange-400/10 px-3 py-1 text-xs font-bold text-orange-200">
+        <div class="mb-4 inline-flex items-center gap-2 rounded-full border border-[color:var(--gold)]/35 bg-[color:var(--gold-light)]/20 px-4 py-1.5 text-xs font-extrabold text-[color:var(--gold-light)]">
+            <span class="h-1.5 w-1.5 rounded-full bg-[color:var(--gold)]"></span>
             {{ $kicker }}
-        </p>
+        </div>
     @endif
 
-    <h2 class="text-2xl font-extrabold leading-tight text-white md:text-3xl">{{ $title }}</h2>
+    <h2 class="text-3xl font-black leading-tight text-white md:text-4xl">
+        {{ $title }}
+    </h2>
+
+    <div class="{{ $center ? 'mx-auto' : '' }} mt-4 h-px w-28 bg-gradient-to-l from-[color:var(--gold)]/70 to-transparent"></div>
 
     @if ($description)
-        <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300 {{ $center ? 'mx-auto' : '' }}">{{ $description }}</p>
+        <p class="mt-5 max-w-3xl text-[15px] leading-8 text-[color:var(--gold-light)]/90 {{ $center ? 'mx-auto' : '' }}">
+            {{ $description }}
+        </p>
     @endif
 </div>
