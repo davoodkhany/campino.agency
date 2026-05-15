@@ -6,6 +6,66 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    --font-sans: 'Vazirmatn', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+:root {
+    --purple-deep: #3D2E5F;
+    --purple: #5B4C8A;
+    --purple-light: #8B6FBF;
+    --gold: #F5C26B;
+    --gold-light: #FBE5B6;
+    --ink: #1A1A1A;
+    color-scheme: dark;
+}
+
+body {
+    background:
+        radial-gradient(44rem 30rem at 88% -8%, rgba(245, 194, 107, 0.25), transparent 60%),
+        radial-gradient(30rem 20rem at -5% 35%, rgba(139, 111, 191, 0.35), transparent 70%),
+        radial-gradient(22rem 22rem at 75% 72%, rgba(91, 76, 138, 0.35), transparent 75%),
+        linear-gradient(160deg, #31254c 0%, var(--purple-deep) 45%, #493b77 100%);
+    color: var(--gold-light);
+    min-height: 100vh;
+}
+
+::selection {
+    background: rgba(245, 194, 107, 0.4);
+    color: #2b213f;
+}
+
+.container-shell {
+    width: min(92%, 76rem);
+    margin-inline: auto;
+}
+
+.premium-glass {
+    border: 1px solid rgba(251, 229, 182, 0.2);
+    background: linear-gradient(120deg, rgba(251, 229, 182, 0.1), rgba(139, 111, 191, 0.12));
+    box-shadow: 0 18px 40px rgba(14, 8, 26, 0.36);
+    backdrop-filter: blur(16px);
+}
+
+.premium-card {
+    border: 1px solid rgba(251, 229, 182, 0.18);
+    background:
+        linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(251, 229, 182, 0.78));
+    box-shadow:
+        0 20px 44px rgba(13, 8, 25, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.dark-surface {
+    border: 1px solid rgba(251, 229, 182, 0.18);
+    background:
+        radial-gradient(24rem 16rem at 88% -14%, rgba(245, 194, 107, 0.22), transparent 62%),
+        linear-gradient(155deg, rgba(61, 46, 95, 0.96), rgba(91, 76, 138, 0.96));
+    box-shadow: 0 24px 46px rgba(10, 6, 18, 0.44);
+}
+
+.gold-ring {
+    box-shadow:
+        0 0 0 1px rgba(245, 194, 107, 0.24),
+        0 0 0 7px rgba(245, 194, 107, 0.1);
 }
