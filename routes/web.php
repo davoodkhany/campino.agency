@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CampaignRequestController;
+use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,10 +13,9 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/case-studies', 'caseStudies')->name('case-studies');
     Route::get('/pricing', 'pricing')->name('pricing');
     Route::get('/blog', 'blog')->name('blog');
-
     Route::get('/campaign-request', 'campaignRequest')->name('campaign-request');
-    Route::post('/campaign-request', 'submitCampaignRequest')->name('campaign-request.submit');
-
     Route::get('/contact', 'contact')->name('contact');
-    Route::post('/contact', 'submitContact')->name('contact.submit');
 });
+
+Route::post('/campaign-request', [CampaignRequestController::class, 'store'])->name('campaign-request.submit');
+Route::post('/contact', [ContactMessageController::class, 'store'])->name('contact.submit');
