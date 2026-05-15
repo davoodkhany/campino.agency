@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\AdminRequestStatus;
 use Illuminate\Database\Eloquent\Model;
 
 class CampaignRequest extends Model
@@ -21,5 +22,16 @@ class CampaignRequest extends Model
         'website_url',
         'description',
         'status',
+        'admin_notes',
     ];
+
+    /**
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'status' => AdminRequestStatus::class,
+        ];
+    }
 }
