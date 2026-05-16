@@ -1,3 +1,4 @@
+@import url('/font/fontiran.css');
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -6,8 +7,7 @@
 @source '../**/*.js';
 
 @theme {
-    --font-sans: 'Vazirmatn', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Yekan Bakh NoEn', sans-serif;
 }
 
 :root {
@@ -18,6 +18,29 @@
     --gold-light: #FBE5B6;
     --ink: #1A1A1A;
     color-scheme: dark;
+}
+
+html,
+body {
+    font-family: 'Yekan Bakh NoEn', sans-serif;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+    font-family: 'Yekan Bakh NoEn', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Yekan Bakh NoEn', sans-serif;
+    font-weight: 900;
 }
 
 body {

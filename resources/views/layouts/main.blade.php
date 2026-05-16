@@ -6,10 +6,6 @@
     <title>@yield('title', 'کمپینو') | کمپینو ایجنسی</title>
     <meta name="description" content="کمپینو ایجنسی طراحی و اجرای کمپین های تبلیغاتی 360 درجه">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800&display=swap" rel="stylesheet">
-
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans bg-slate-950 text-slate-100 antialiased">
